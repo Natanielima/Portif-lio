@@ -2,11 +2,47 @@ import HeroSection from "./components/Pages/Home/hero-section";
 import HighlightedProjects from "./components/Pages/Home/highlighted-projects";
 import KnowTechs from "./components/Pages/Home/know-techs";
 import Work from "./components/Pages/Home/works";
+import { fetchHydrahpyQuery } from "./utils/fetch-hygraph-query";
+import { HomePageData } from "./types/pageInfo";
+
+const getPageData = async():Promise<HomePageData>=>{
+  const query = `
+  query MyQuery {
+    page(where: {slug: "home"}) {
+      introdution {
+        raw
+      }
+      knownTechs {
+        iconSvg
+        name
+        startDate
+      }
+      tecnologies {
+        name
+      }
+      profilePicture {
+        url
+      }
+      socials {
+        url
+        iconSvg
+      }
+    }
+  }
+`
+return fetchHydrahpyQuery(
+  query
+)
+
+}
 
 export default async function Home() {
+
+  const { page: pageData} = await getPageData()
+
   return (
     <>
-      <HeroSection/>
+      <HeroSection homeInfo={pageData}/>
       <KnowTechs/>
       <HighlightedProjects/>
       <Work/>
