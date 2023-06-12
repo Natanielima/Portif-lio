@@ -16,9 +16,9 @@ export default function HighlightedProjects({projects}:HighlightedProjectsProps)
       <HorizontalDivider className="mb-16"/>
       <div>
         {projects?.map(project=>(
-          <div>
-            <ProjectCard project={project}/>
-            <HorizontalDivider className="my-16"/>
+          <div key={`div do ${project.title}`}>
+            <ProjectCard key={project.title} project={project}/>
+            <HorizontalDivider key={`horizontal ${project.title}`} className="my-16"/>
           </div>
       
         ))}

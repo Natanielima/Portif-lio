@@ -29,7 +29,7 @@ export default function HeroSection({homeInfo}:HeroSectionProps) {
                     </div>
                     <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px] ">
                         {homeInfo.tecnologies.map((tech)=>
-                        <TechBadge name={tech.name}/>)}
+                        <TechBadge key={tech.name} name={tech.name}/>)}
                     </div>
                     <div className="w-max mt-6 lg:mt-10 flex sm:items-center sm:gap-5 sm:flex-row flex-col">
                         <Button className="shadow-button" onClick={handleContact}>

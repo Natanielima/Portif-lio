@@ -1,5 +1,5 @@
-import { projects } from "@/app/types/projects";
-import Image from "next/image";
+import { projects } from '@/app/types/projects';
+import Image from 'next/image';
 
 type ProjectsListProps={
     project: projects
