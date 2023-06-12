@@ -1,6 +1,6 @@
 type CMSIconProps = {
-  icon: string
-}
+  icon: string;
+};
 
 export default function CMSIcon({ icon }: CMSIconProps) {
   return (
@@ -9,5 +9,5 @@ export default function CMSIcon({ icon }: CMSIconProps) {
         __html: icon,
       }}
     />
-  )
+  );
 }
