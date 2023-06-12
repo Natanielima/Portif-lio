@@ -5,6 +5,18 @@ import Header from "./components/Header"
 import ContactForm from "./components/contact-form"
 import { BackToTop } from "./components/BacktoTop"
 import FooterPage from "./components/Footer"
+import { Toaster } from "./components/Toaster"
+
+export const metadata={
+  title:{
+    template:'%s | NL Dev'
+  }, 
+  icons:[
+    {
+      url:'/images/logoNl.svg'
+    }
+  ]
+}
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,6 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
+        <Toaster/>
         <Header />
         {children}
         <ContactForm />

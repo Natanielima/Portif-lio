@@ -3,6 +3,10 @@ import PageIntro from '../components/Pages/Projects/page-intro'
 import { ProjectsPageData } from '../types/pageInfo'
 import { fetchHydrahpyQuery } from '../utils/fetch-hygraph-query'
 
+export const metadata={
+  title:'Projetos'
+}
+
 const getPageData = async (): Promise<ProjectsPageData> => {
   const query = `
     query MyQuery {
@@ -21,10 +25,12 @@ const getPageData = async (): Promise<ProjectsPageData> => {
       `
 
   return fetchHydrahpyQuery(query)
+  
 }
 
 export default async function Projects() {
   const { projects } = await getPageData()
+  
   return (
     <>
       <PageIntro />
@@ -32,3 +38,6 @@ export default async function Projects() {
     </>
   )
 }
+
+
+

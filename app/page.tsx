@@ -5,6 +5,11 @@ import Work from "./components/Pages/Home/works"
 import { fetchHydrahpyQuery } from "./utils/fetch-hygraph-query"
 import { HomePageData } from "./types/pageInfo"
 
+export const metadata={
+  title:'Home'
+}
+
+
 const getPageData = async (): Promise<HomePageData> => {
   const query = `
   query MyQuery {
