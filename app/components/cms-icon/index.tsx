@@ -1,11 +1,13 @@
-type CMSIconProps={
-    icon:string
-}
+type CMSIconProps = {
+  icon: string;
+};
 
-export default function CMSIcon({icon}:CMSIconProps) {
-    return(
-        <div dangerouslySetInnerHTML={{
-            __html:icon
-        }}/>
-    )
+export default function CMSIcon({ icon }: CMSIconProps) {
+  return (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: icon,
+      }}
+    />
+  );
 }

@@ -3,15 +3,14 @@ import ProjectSection from "@/app/components/Pages/Projects/Project-section";
 import { ProjectPageData, ProjectsPageData } from "@/app/types/pageInfo";
 import { fetchHydrahpyQuery } from "@/app/utils/fetch-hygraph-query";
 
-type ProjectProps={
-    params:{
-        slug:string
-    }
-}
+type ProjectProps = {
+  params: {
+    slug: string;
+  };
+};
 
-const getPageDataDetalis=async( slug:any):Promise<ProjectPageData>=>{
-
-    const query=`
+const getPageDataDetalis = async (slug: any): Promise<ProjectPageData> => {
+  const query = `
     query ProjectQuery() {
         project(where: {slug: "${slug}"}) {
           pageThumbmail {
@@ -40,19 +39,17 @@ const getPageDataDetalis=async( slug:any):Promise<ProjectPageData>=>{
         }
       }
 
-      `
+      `;
 
-    return fetchHydrahpyQuery(
-        query
-    )
-}
+  return fetchHydrahpyQuery(query);
+};
 
-export default async function Project({params:{slug}}:ProjectProps) {
-    const {project} = await getPageDataDetalis(slug);
-    return(
-        <>
-            <ProjectDetails project={project}/>
-            <ProjectSection section={project.section}/>
-        </>
-    )
+export default async function Project({ params: { slug } }: ProjectProps) {
+  const { project } = await getPageDataDetalis(slug);
+  return (
+    <>
+      <ProjectDetails project={project} />
+      <ProjectSection section={project.section} />
+    </>
+  );
 }

@@ -5,7 +5,7 @@ import Work from "./components/Pages/Home/works";
 import { fetchHydrahpyQuery } from "./utils/fetch-hygraph-query";
 import { HomePageData } from "./types/pageInfo";
 
-const getPageData = async():Promise<HomePageData>=>{
+const getPageData = async (): Promise<HomePageData> => {
   const query = `
   query MyQuery {
     page(where: {slug: "home"}) {
@@ -57,24 +57,19 @@ const getPageData = async():Promise<HomePageData>=>{
     }
   }
   
-`
-return fetchHydrahpyQuery(
-  query
-)
-
-}
+`;
+  return fetchHydrahpyQuery(query);
+};
 
 export default async function Home() {
-
-  const { page: pageData, workExperiences } = await getPageData()
-
+  const { page: pageData, workExperiences } = await getPageData();
 
   return (
     <>
-      <HeroSection homeInfo={pageData}/>
-      <KnowTechs techs={pageData.knownTechs}/>
-      <HighlightedProjects projects={pageData.highlightProjects}/>
-      <Work experiences={workExperiences}/>
+      <HeroSection homeInfo={pageData} />
+      <KnowTechs techs={pageData.knownTechs} />
+      <HighlightedProjects projects={pageData.highlightProjects} />
+      <Work experiences={workExperiences} />
     </>
-  )
+  );
 }
