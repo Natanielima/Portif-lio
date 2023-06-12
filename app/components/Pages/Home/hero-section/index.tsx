@@ -6,22 +6,6 @@ import { HomePageInfo } from "@/app/types/pageInfo";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
 import { HiArrowNarrowRight } from 'react-icons/hi'
-import { TbBrandGithub, TbBrandLinkedin, TbBrandWhatsapp } from 'react-icons/tb'
-
-const MOCK_CONTACTS = [
-    {
-        url:'https://github.com/Natanielima',
-        icon: <TbBrandGithub/>
-    },
-    {
-        url:'https://www.linkedin.com/in/nataniellima/',
-        icon: <TbBrandLinkedin/>
-    },
-    {
-        url:'https://www.linkedin.com/in/nataniellima/',
-        icon: <TbBrandWhatsapp/>
-    },
-]
 
 type HeroSectionProps={
     homeInfo: HomePageInfo

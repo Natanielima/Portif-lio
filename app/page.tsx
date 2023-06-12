@@ -28,6 +28,22 @@ const getPageData = async():Promise<HomePageData>=>{
         iconSvg
       }
     }
+    workExperiences {
+      companyLogo {
+        url
+      }
+      role
+      companyName
+      companyUrl
+      startDate
+      endDate
+      description {
+        raw
+      }
+      tecnologies {
+        name
+      }
+    }
   }
 `
 return fetchHydrahpyQuery(
@@ -38,14 +54,14 @@ return fetchHydrahpyQuery(
 
 export default async function Home() {
 
-  const { page: pageData} = await getPageData()
+  const { page: pageData, workExperiences } = await getPageData()
 
   return (
     <>
       <HeroSection homeInfo={pageData}/>
       <KnowTechs/>
       <HighlightedProjects/>
-      <Work/>
+      <Work experiences={workExperiences}/>
     </>
   )
 }

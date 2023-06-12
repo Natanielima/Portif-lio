@@ -1,18 +1,24 @@
 import SectionType from "@/app/components/Section-title";
 import ItemsWork from "./itemsWork";
+import { workExperiences } from "@/app/types/workExperiences";
 
-export default function Work() {
+type workProps={
+    experiences: workExperiences[]
+}
+
+export default function Work({experiences}:workProps) {
     return(
         <section className="container py-16 flex gap-10 md:gap-4 lg:gap-16 flex-col md:flex-row">
             <div className="max-w-[420px]">
                 <SectionType subtitle="experiências" title="Experiência profissional"  />
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum facilis fugit, soluta laborum delectus, accusantium nemo possimus quas animi cum sed, tempora aliquam? Asperiores fugit sint veritatis ex neque vero?
+                    Estou sempre aberto a novos desafios e projetos emocionantes. Vamos trabalhar 🚀 juntos para criar soluções para sua empresa!
                 </p>
             </div>
             <div className="flex flex-col gap-4">
-               <ItemsWork/>
-               <ItemsWork/>
+                {experiences?.map(experience=>(
+                    <ItemsWork key={experience.companyName} experience={experience}/>
+                ))}
             </div>
 
         </section>
