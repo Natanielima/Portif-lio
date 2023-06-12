@@ -6,5 +6,5 @@ export default function Footer() {
       </span>
       <strong className="font-medium font-mono">Nataniel Lima 🚀</strong>
     </footer>
-  );
+  )
 }

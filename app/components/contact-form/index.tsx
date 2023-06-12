@@ -1,27 +1,27 @@
-"use client";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import Button from "../Button";
-import SectionType from "../Section-title";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
+"use client"
+import { HiArrowNarrowRight } from "react-icons/hi"
+import Button from "../Button"
+import SectionType from "../Section-title"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod"
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
   email: z.string().email(),
   message: z.string().min(1),
-});
+})
 
-type ContactFormData = z.infer<typeof contactFormSchema>;
+type ContactFormData = z.infer<typeof contactFormSchema>
 
 export default function ContactForm() {
   const { handleSubmit, register } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
-  });
+  })
 
   const onSubmit = (data: ContactFormData) => {
-    console.log(data);
-  };
+    console.log(data)
+  }
   return (
     <section
       id="contact"
@@ -61,5 +61,5 @@ export default function ContactForm() {
         </form>
       </div>
     </section>
-  );
+  )
 }

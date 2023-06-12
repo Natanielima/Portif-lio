@@ -1,8 +1,8 @@
-import { cn } from "@/app/lib/utils";
-import NextLink from "next/link";
-import { ComponentProps } from "react";
+import { cn } from "@/app/lib/utils"
+import NextLink from "next/link"
+import { ComponentProps } from "react"
 
-type LinkProps = ComponentProps<typeof NextLink>;
+type LinkProps = ComponentProps<typeof NextLink>
 
 export default function Link({ className, children, ...props }: LinkProps) {
   return (
@@ -15,5 +15,5 @@ export default function Link({ className, children, ...props }: LinkProps) {
     >
       {children}
     </NextLink>
-  );
+  )
 }

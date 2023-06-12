@@ -1,26 +1,26 @@
-import TechBadge from "@/app/components/TechBadge";
-import RichText from "@/app/components/rich-text";
-import { workExperiences } from "@/app/types/workExperiences";
-import { differenceInMonths, differenceInYears, format } from "date-fns";
-import ptBR from "date-fns/locale/pt-BR";
-import { difference } from "next/dist/build/utils";
-import Image from "next/image";
+import TechBadge from "@/app/components/TechBadge"
+import RichText from "@/app/components/rich-text"
+import { workExperiences } from "@/app/types/workExperiences"
+import { differenceInMonths, differenceInYears, format } from "date-fns"
+import ptBR from "date-fns/locale/pt-BR"
+import { difference } from "next/dist/build/utils"
+import Image from "next/image"
 
 type ItemsWorkProps = {
-  experience: workExperiences;
-};
+  experience: workExperiences
+}
 
 export default function ItemsWork({ experience }: ItemsWorkProps) {
-  const startDate = new Date(experience.startDate);
+  const startDate = new Date(experience.startDate)
 
-  const formattedStarDate = format(startDate, "MMM yyyy", { locale: ptBR });
+  const formattedStarDate = format(startDate, "MMM yyyy", { locale: ptBR })
   const formattedEndDate = experience.endDate
     ? format(new Date(experience.endDate), "MMM yyyy", { locale: ptBR })
-    : "até o momento";
-  const end = experience.endDate ? new Date(experience.endDate) : new Date();
-  const months = differenceInMonths(end, startDate);
-  const years = differenceInYears(end, startDate);
-  const monthsRemaining = months % 12;
+    : "até o momento"
+  const end = experience.endDate ? new Date(experience.endDate) : new Date()
+  const months = differenceInMonths(end, startDate)
+  const years = differenceInYears(end, startDate)
+  const monthsRemaining = months % 12
   const formattedDuration =
     years > 0
       ? `${years} ano${years > 1 ? "s" : ""}${
@@ -28,7 +28,7 @@ export default function ItemsWork({ experience }: ItemsWorkProps) {
             ? ` e ${monthsRemaining} mês${monthsRemaining > 1 ? "es" : ""}`
             : ""
         }`
-      : `${months} mês${months > 1 ? "es" : ""}`;
+      : `${months} mês${months > 1 ? "es" : ""}`
   return (
     <div className="grid grid-cols-[40px,1fr] gap-4 md:gap-10">
       <div className="flex flex-col items-center gap-4">
@@ -70,5 +70,5 @@ export default function ItemsWork({ experience }: ItemsWorkProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

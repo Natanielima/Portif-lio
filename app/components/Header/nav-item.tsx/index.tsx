@@ -1,16 +1,16 @@
-import { cn } from "@/app/lib/utils";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { cn } from "@/app/lib/utils"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 interface PropsNavItem {
-  label: string;
-  href: string;
+  label: string
+  href: string
 }
 
 export default function NavItem({ label, href }: PropsNavItem) {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
-  const isActive = pathname === href;
+  const isActive = pathname === href
   return (
     <Link
       className={cn(
@@ -22,5 +22,5 @@ export default function NavItem({ label, href }: PropsNavItem) {
       <span className="text-emerald-400">#</span>
       {label}
     </Link>
-  );
+  )
 }

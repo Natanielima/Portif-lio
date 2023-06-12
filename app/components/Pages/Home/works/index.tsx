@@ -1,10 +1,10 @@
-import SectionType from "@/app/components/Section-title";
-import ItemsWork from "./itemsWork";
-import { workExperiences } from "@/app/types/workExperiences";
+import SectionType from "@/app/components/Section-title"
+import ItemsWork from "./itemsWork"
+import { workExperiences } from "@/app/types/workExperiences"
 
 type workProps = {
-  experiences: workExperiences[];
-};
+  experiences: workExperiences[]
+}
 
 export default function Work({ experiences }: workProps) {
   return (
@@ -22,5 +22,5 @@ export default function Work({ experiences }: workProps) {
         ))}
       </div>
     </section>
-  );
+  )
 }

@@ -1,23 +1,23 @@
-"use client";
-import Button from "@/app/components/Button";
-import TechBadge from "@/app/components/TechBadge";
-import CMSIcon from "@/app/components/cms-icon";
-import { HomePageInfo } from "@/app/types/pageInfo";
-import { RichText } from "@graphcms/rich-text-react-renderer";
-import Image from "next/image";
-import { HiArrowNarrowRight } from "react-icons/hi";
+"use client"
+import Button from "@/app/components/Button"
+import TechBadge from "@/app/components/TechBadge"
+import CMSIcon from "@/app/components/cms-icon"
+import { HomePageInfo } from "@/app/types/pageInfo"
+import { RichText } from "@graphcms/rich-text-react-renderer"
+import Image from "next/image"
+import { HiArrowNarrowRight } from "react-icons/hi"
 
 type HeroSectionProps = {
-  homeInfo: HomePageInfo;
-};
+  homeInfo: HomePageInfo
+}
 
 export default function HeroSection({ homeInfo }: HeroSectionProps) {
   const handleContact = () => {
-    const contactSection = document.querySelector("#contact");
+    const contactSection = document.querySelector("#contact")
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
+      contactSection.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
   return (
     <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
       <div className="container flex items-start justify-between flex-col-reverse lg:flex-row ">
@@ -60,5 +60,5 @@ export default function HeroSection({ homeInfo }: HeroSectionProps) {
         />
       </div>
     </section>
-  );
+  )
 }

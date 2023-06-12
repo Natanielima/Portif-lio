@@ -1,33 +1,33 @@
-import type { RichTextContent } from "@graphcms/rich-text-types";
+import type { RichTextContent } from "@graphcms/rich-text-types"
 
 export type KnownTech = {
-  iconSvg: string;
-  name: string;
-  startDate: string;
-};
+  iconSvg: string
+  name: string
+  startDate: string
+}
 
 export type ProjecSection = {
-  title: string;
+  title: string
   image: {
-    url: string;
-  };
-};
+    url: string
+  }
+}
 
 export type projects = {
-  slug: string;
+  slug: string
   thumbmail: {
-    url: string;
-  };
-  title: string;
-  shortDescription: string;
-  tecnologies: KnownTech[];
+    url: string
+  }
+  title: string
+  shortDescription: string
+  tecnologies: KnownTech[]
   pageThumbmail: {
-    url: string;
-  };
-  section: ProjecSection[];
+    url: string
+  }
+  section: ProjecSection[]
   description: {
-    raw: RichTextContent;
-  };
-  liveProjectUrl?: string;
-  gitHubUrl?: string;
-};
+    raw: RichTextContent
+  }
+  liveProjectUrl?: string
+  gitHubUrl?: string
+}

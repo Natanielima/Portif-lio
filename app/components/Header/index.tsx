@@ -1,7 +1,7 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import NavItem from "./nav-item.tsx";
+"use client"
+import Image from "next/image"
+import Link from "next/link"
+import NavItem from "./nav-item.tsx"
 
 const NAV_ITEMS = [
   {
@@ -12,7 +12,7 @@ const NAV_ITEMS = [
     label: "Projetos",
     href: "/projects",
   },
-];
+]
 
 export default function Header() {
   return (
@@ -33,5 +33,5 @@ export default function Header() {
         </nav>
       </div>
     </header>
-  );
+  )
 }

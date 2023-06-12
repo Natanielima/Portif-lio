@@ -1,10 +1,10 @@
-import SectionType from "@/app/components/Section-title";
-import KnowTech from "./know-cards";
-import { KnownTech as IKnownTech } from "@/app/types/projects";
+import SectionType from "@/app/components/Section-title"
+import KnowTech from "./know-cards"
+import { KnownTech as IKnownTech } from "@/app/types/projects"
 
 type KnowTechsProps = {
-  techs: IKnownTech[];
-};
+  techs: IKnownTech[]
+}
 
 export default function KnowTechs({ techs }: KnowTechsProps) {
   return (
@@ -16,5 +16,5 @@ export default function KnowTechs({ techs }: KnowTechsProps) {
         ))}
       </div>
     </section>
-  );
+  )
 }

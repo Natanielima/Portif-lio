@@ -1,12 +1,12 @@
-import TechBadge from "@/app/components/TechBadge";
-import Link from "@/app/components/link";
-import { projects } from "@/app/types/projects";
-import Image from "next/image";
-import { HiArrowNarrowRight } from "react-icons/hi";
+import TechBadge from "@/app/components/TechBadge"
+import Link from "@/app/components/link"
+import { projects } from "@/app/types/projects"
+import Image from "next/image"
+import { HiArrowNarrowRight } from "react-icons/hi"
 
 type ProjectCardProps = {
-  project: projects;
-};
+  project: projects
+}
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
@@ -45,5 +45,5 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </Link>
       </div>
     </div>
-  );
+  )
 }

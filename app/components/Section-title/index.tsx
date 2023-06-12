@@ -1,10 +1,10 @@
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/app/lib/utils"
 
 type SectionTiteProps = {
-  title: string;
-  subtitle: string;
-  className?: string;
-};
+  title: string
+  subtitle: string
+  className?: string
+}
 
 export default function SectionType({
   title,
@@ -18,5 +18,5 @@ export default function SectionType({
       </span>
       <h3 className="text-3xl font-medium">{title}</h3>
     </div>
-  );
+  )
 }

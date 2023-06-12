@@ -1,7 +1,7 @@
 import {
   RichText as CMSRichText,
   RichTextProps,
-} from "@graphcms/rich-text-react-renderer";
+} from "@graphcms/rich-text-react-renderer"
 
 export default function RichText({ ...props }: RichTextProps) {
   return (
@@ -18,5 +18,5 @@ export default function RichText({ ...props }: RichTextProps) {
         ),
       }}
     />
-  );
+  )
 }

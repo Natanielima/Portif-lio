@@ -1,19 +1,19 @@
-import Button from "@/app/components/Button";
-import SectionType from "@/app/components/Section-title";
-import TechBadge from "@/app/components/TechBadge";
-import { TbBrandGithub } from "react-icons/tb";
-import { FiGlobe } from "react-icons/fi";
-import Link from "@/app/components/link";
-import { HiArrowNarrowLeft } from "react-icons/hi";
-import { projects } from "@/app/types/projects";
-import RichText from "@/app/components/rich-text";
+import Button from "@/app/components/Button"
+import SectionType from "@/app/components/Section-title"
+import TechBadge from "@/app/components/TechBadge"
+import { TbBrandGithub } from "react-icons/tb"
+import { FiGlobe } from "react-icons/fi"
+import Link from "@/app/components/link"
+import { HiArrowNarrowLeft } from "react-icons/hi"
+import { projects } from "@/app/types/projects"
+import RichText from "@/app/components/rich-text"
 
 type ProjectDetailsProps = {
-  project: projects;
-};
+  project: projects
+}
 
 export default function ProjectDetails({ project }: ProjectDetailsProps) {
-  console.log(project);
+  console.log(project)
   return (
     <section className="w-full sm:min-h-[750px] flex flex-col items-center justify-end relative pb-10 sm:pb-24 py-24 px-6 overflow-hidden ">
       <div
@@ -62,5 +62,5 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
         Voltar para Projetos
       </Link>
     </section>
-  );
+  )
 }

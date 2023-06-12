@@ -10,7 +10,7 @@ export const fetchHydrahpyQuery = async (query: string) => {
     next: {
       revalidate: 1,
     },
-  });
-  const { data } = await response.json();
-  return data;
-};
+  })
+  const { data } = await response.json()
+  return data
+}
