@@ -1,11 +1,59 @@
 import ProjectDetails from "@/app/components/Pages/Projects/Project-details";
 import ProjectSection from "@/app/components/Pages/Projects/Project-section";
+import { ProjectPageData, ProjectsPageData } from "@/app/types/pageInfo";
+import { fetchHydrahpyQuery } from "@/app/utils/fetch-hygraph-query";
 
-export default function Project() {
+type ProjectProps={
+    params:{
+        slug:string
+    }
+}
+
+const getPageDataDetalis=async( slug:any):Promise<ProjectPageData>=>{
+
+    const query=`
+    query ProjectQuery() {
+        project(where: {slug: "${slug}"}) {
+          pageThumbmail {
+            url
+          }
+          thumbmail {
+            url
+          }
+          section {
+            title
+            image {
+              url
+            }
+          }
+          title
+          shortDescription
+          description {
+            raw
+            text
+          }
+          tecnologies {
+            name
+          }
+          gitHubUrl
+          liveProjectUrl
+        }
+      }
+
+      `
+
+    return fetchHydrahpyQuery(
+        query
+    )
+}
+
+export default async function Project({params:{slug}}:ProjectProps) {
+    const {project} = await getPageDataDetalis(slug);
+    console.log(project)
     return(
         <>
-            <ProjectDetails/>
-            <ProjectSection/>
+            <ProjectDetails project={project}/>
+            <ProjectSection section={project.section}/>
         </>
     )
 }

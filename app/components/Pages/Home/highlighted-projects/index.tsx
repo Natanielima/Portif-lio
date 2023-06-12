@@ -3,21 +3,25 @@ import SectionType from "@/app/components/Section-title";
 import ProjectCard from "./project-card";
 import Link from "@/app/components/link";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { projects } from "@/app/types/projects";
 
-export default function HighlightedProjects() {
+type HighlightedProjectsProps={
+  projects: projects[]
+}
+
+export default function HighlightedProjects({projects}:HighlightedProjectsProps) {
     return(
     <section className="container py-16">
       <SectionType subtitle="destaques" title="Projetos em destaque"/>
       <HorizontalDivider className="mb-16"/>
       <div>
-        <ProjectCard/>
-        <HorizontalDivider className="my-16"/>
-        <ProjectCard/>
-        <HorizontalDivider className="my-16"/>
-        <ProjectCard/>
-        <HorizontalDivider className="my-16"/>
-        <ProjectCard/>
-        <HorizontalDivider className="my-16"/>
+        {projects?.map(project=>(
+          <div>
+            <ProjectCard project={project}/>
+            <HorizontalDivider className="my-16"/>
+          </div>
+      
+        ))}
 
         <p className="flex items-center gap-1.5">
             <span className="text-gray-400">

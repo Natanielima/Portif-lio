@@ -1,17 +1,11 @@
+import { ProjecSection } from "@/app/types/projects"
 import Image from "next/image"
 
-const section = [
-    {
-        title:'Login',
-        image:'https://media.graphassets.com/ZsK2GK0HTru6pi0WwEpc'
-    },
-    {
-        title:'Home',
-        image:'https://media.graphassets.com/7Kic5YHkQcmGrN57MSXw'
-    }
-]
+type ProjectSectionProps={
+    section:ProjecSection[]
+}
 
-export default function ProjectSection() {
+export default function ProjectSection({section}:ProjectSectionProps) {
     return(
         <section className="container my-12 md:my-32 flex flex-col gap-8 md:gap-32">
             {section.map(section=>(
@@ -20,7 +14,7 @@ export default function ProjectSection() {
                         {section.title}
                     </h2>
                     <Image
-                    src={section.image}
+                    src={section.image.url}
                     width={1080}
                     height={672}
                     className="w-full aspect-auto rounded-lg object-cover"
