@@ -1,10 +1,10 @@
-import TechBadge from "@/app/components/TechBadge"
-import RichText from "@/app/components/rich-text"
-import { workExperiences } from "@/app/types/workExperiences"
-import { differenceInMonths, differenceInYears, format } from "date-fns"
-import ptBR from "date-fns/locale/pt-BR"
-import { difference } from "next/dist/build/utils"
-import Image from "next/image"
+import TechBadge from '@/app/components/TechBadge'
+import RichText from '@/app/components/rich-text'
+import { workExperiences } from '@/app/types/workExperiences'
+import { differenceInMonths, differenceInYears, format } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
+import { difference } from 'next/dist/build/utils'
+import Image from 'next/image'
 
 type ItemsWorkProps = {
   experience: workExperiences

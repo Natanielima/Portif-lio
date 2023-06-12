@@ -1,15 +1,15 @@
-"use client"
+'use client'
 
-import { TbArrowNarrowUp } from "react-icons/tb"
-import { AnimatePresence, motion } from "framer-motion"
-import { useCallback, useEffect, useState } from "react"
-import Button from "../Button"
+import { TbArrowNarrowUp } from 'react-icons/tb'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useCallback, useEffect, useState } from 'react'
+import Button from '../Button'
 
 export const BackToTop = () => {
   const [show, setShow] = useState(false)
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   const handleScroll = useCallback(() => {
     if (!show && window.scrollY > 500) setShow(true)
@@ -17,8 +17,8 @@ export const BackToTop = () => {
   }, [show])
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
 
   return (

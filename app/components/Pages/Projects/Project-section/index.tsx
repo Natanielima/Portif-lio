@@ -1,5 +1,5 @@
-import { ProjecSection } from "@/app/types/projects"
-import Image from "next/image"
+import { ProjecSection } from '@/app/types/projects'
+import Image from 'next/image'
 
 type ProjectSectionProps = {
   section: ProjecSection[]

@@ -1,6 +1,6 @@
-import Link from "next/link"
-import ProjectCard from "./Project-card"
-import { projects } from "@/app/types/projects"
+import Link from 'next/link'
+import ProjectCard from './Project-card'
+import { projects } from '@/app/types/projects'
 
 type ProjectsListProps = {
   projects: projects[]

@@ -1,6 +1,6 @@
-import SectionType from "@/app/components/Section-title"
-import Link from "@/app/components/link"
-import { HiArrowNarrowLeft } from "react-icons/hi"
+import SectionType from '@/app/components/Section-title'
+import Link from '@/app/components/link'
+import { HiArrowNarrowLeft } from 'react-icons/hi'
 
 export default function PageIntro() {
   return (

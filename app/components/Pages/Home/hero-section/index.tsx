@@ -1,11 +1,11 @@
-"use client"
-import Button from "@/app/components/Button"
-import TechBadge from "@/app/components/TechBadge"
-import CMSIcon from "@/app/components/cms-icon"
-import { HomePageInfo } from "@/app/types/pageInfo"
-import { RichText } from "@graphcms/rich-text-react-renderer"
-import Image from "next/image"
-import { HiArrowNarrowRight } from "react-icons/hi"
+'use client'
+import Button from '@/app/components/Button'
+import TechBadge from '@/app/components/TechBadge'
+import CMSIcon from '@/app/components/cms-icon'
+import { HomePageInfo } from '@/app/types/pageInfo'
+import { RichText } from '@graphcms/rich-text-react-renderer'
+import Image from 'next/image'
+import { HiArrowNarrowRight } from 'react-icons/hi'
 
 type HeroSectionProps = {
   homeInfo: HomePageInfo

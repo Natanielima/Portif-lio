@@ -1,9 +1,9 @@
-import HorizontalDivider from "@/app/components/Divider/HonrizontalDivider"
-import SectionType from "@/app/components/Section-title"
-import ProjectCard from "./project-card"
-import Link from "@/app/components/link"
-import { HiArrowNarrowRight } from "react-icons/hi"
-import { projects } from "@/app/types/projects"
+import HorizontalDivider from '@/app/components/Divider/HonrizontalDivider'
+import SectionType from '@/app/components/Section-title'
+import ProjectCard from './project-card'
+import Link from '@/app/components/link'
+import { HiArrowNarrowRight } from 'react-icons/hi'
+import { projects } from '@/app/types/projects'
 
 type HighlightedProjectsProps = {
   projects: projects[]

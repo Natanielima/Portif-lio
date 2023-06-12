@@ -1,6 +1,6 @@
-import SectionType from "@/app/components/Section-title"
-import KnowTech from "./know-cards"
-import { KnownTech as IKnownTech } from "@/app/types/projects"
+import SectionType from '@/app/components/Section-title'
+import KnowTech from './know-cards'
+import { KnownTech as IKnownTech } from '@/app/types/projects'
 
 type KnowTechsProps = {
   techs: IKnownTech[]

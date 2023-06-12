@@ -1,12 +1,12 @@
-import Button from "@/app/components/Button"
-import SectionType from "@/app/components/Section-title"
-import TechBadge from "@/app/components/TechBadge"
-import { TbBrandGithub } from "react-icons/tb"
-import { FiGlobe } from "react-icons/fi"
-import Link from "@/app/components/link"
-import { HiArrowNarrowLeft } from "react-icons/hi"
-import { projects } from "@/app/types/projects"
-import RichText from "@/app/components/rich-text"
+import Button from '@/app/components/Button'
+import SectionType from '@/app/components/Section-title'
+import TechBadge from '@/app/components/TechBadge'
+import { TbBrandGithub } from 'react-icons/tb'
+import { FiGlobe } from 'react-icons/fi'
+import Link from '@/app/components/link'
+import { HiArrowNarrowLeft } from 'react-icons/hi'
+import { projects } from '@/app/types/projects'
+import RichText from '@/app/components/rich-text'
 
 type ProjectDetailsProps = {
   project: projects

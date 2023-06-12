@@ -1,10 +1,10 @@
-"use client"
-import { HiArrowNarrowRight } from "react-icons/hi"
-import Button from "../Button"
-import SectionType from "../Section-title"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
+'use client'
+import { HiArrowNarrowRight } from 'react-icons/hi'
+import Button from '../Button'
+import SectionType from '../Section-title'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),

@@ -1,6 +1,6 @@
-import { cn } from "@/app/lib/utils"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { cn } from '@/app/lib/utils'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface PropsNavItem {
   label: string
