@@ -37,7 +37,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
       </div>
       <div className="my-6 sm:my-12 flex items-center gap-2 sm:gap-4 flex-col sm:flex-row ">
         {project.gitHubUrl ? (
-          <a href={project.gitHubUrl} target="_blank">
+          <a href={project.gitHubUrl} target="_blank" rel="noreferrer">
             <Button className="min-w-[180px]">
               <TbBrandGithub size={20} />
               Repositório
@@ -47,7 +47,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
           ""
         )}
         {project.liveProjectUrl ? (
-          <a href={project.liveProjectUrl} target="_blank">
+          <a href={project.liveProjectUrl} target="_blank" rel="noreferrer">
             <Button className="min-w-[180px]">
               <FiGlobe size={20} />
               Projeto Online

@@ -48,6 +48,7 @@ export default function ItemsWork({ experience }: ItemsWorkProps) {
           <a
             href={experience.companyUrl}
             target="_blank"
+            rel="noreferrer"
             className="text-gray-500 hover:text-emerald-500 transition-colors"
           >
             @{experience.companyName}
