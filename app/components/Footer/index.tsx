@@ -1,6 +1,6 @@
-export default function Footer() {
+export default function FooterPage() {
   return (
-    <footer className='h-14 w-full flex items-center justify-center bg-gray-950 gap-1.5">
+    <footer className="h-14 w-full flex items-center justify-center bg-gray-950 gap-1.5">
       <span className="text-xs sm:text-sm font-mono text-gray-400">
         Feito por
       </span>
