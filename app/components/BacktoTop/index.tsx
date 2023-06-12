@@ -1,4 +1,5 @@
 'use client'
+
 import { TbArrowNarrowUp } from 'react-icons/tb'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useCallback, useEffect, useState } from 'react'
@@ -39,4 +40,5 @@ export const BackToTop = () => {
       )}
     </AnimatePresence>
   )
+  
 }
