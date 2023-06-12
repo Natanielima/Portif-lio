@@ -7,6 +7,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import axios from "axios"
 import { toast } from 'react-hot-toast'
+import { motion } from 'framer-motion'
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
@@ -41,7 +42,11 @@ export default function ContactForm() {
           title="Vamos trabalhar juntos? Entre em contato"
           className="items-center text-center"
         />
-        <form
+        <motion.form
+          initial={{opacity:0, y:50}}
+          whileInView={{opacity:1, y:0}}
+          exit={{opacity:0,  y:50}}
+          transition={{duration:0.5}}
           className="mt-12 w-full flex flex-col gap-4"
           onSubmit={handleSubmit(onSubmit)}
         >
@@ -66,7 +71,7 @@ export default function ContactForm() {
             Enviar mensagem
             <HiArrowNarrowRight size={18} />
           </Button>
-        </form>
+        </motion.form>
       </div>
     </section>
   )

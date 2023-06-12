@@ -12,7 +12,7 @@ export default function KnowTech({ tech }: KnowTechProps) {
     "pt-BR"
   ).replace("há", "")
   return (
-    <div className="p-6 rounded-lg bg-gray-600/20 text-gray-500 flex flex-col hover:text-emerald-500 hover:bg-gray-600/30 transition-all gap-2">
+    <div className="p-6 rounded-lg bg-gray-600/20 text-gray-500 flex flex-col hover:text-emerald-500 hover:bg-gray-600/30 transition-all gap-2 h-[130px]">
       <div>
         <p>{tech.name}</p>
         <CMSIcon icon={tech.iconSvg} />

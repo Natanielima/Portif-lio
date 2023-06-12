@@ -1,10 +1,13 @@
+'use client'
+
 import TechBadge from '@/app/components/TechBadge'
 import RichText from '@/app/components/rich-text'
 import { workExperiences } from '@/app/types/workExperiences'
 import { differenceInMonths, differenceInYears, format } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
-import { difference } from 'next/dist/build/utils'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
+
 
 type ItemsWorkProps = {
   experience: workExperiences
@@ -30,7 +33,12 @@ export default function ItemsWork({ experience }: ItemsWorkProps) {
         }`
       : `${months} mês${months > 1 ? "es" : ""}`
   return (
-    <div className="grid grid-cols-[40px,1fr] gap-4 md:gap-10">
+    <motion.div 
+    initial={{opacity:0, y:50}}
+    whileInView={{opacity:1, y:0}}
+    exit={{opacity:0, y:50}}
+    transition={{duration:0.5}}
+    className="grid grid-cols-[40px,1fr] gap-4 md:gap-10">
       <div className="flex flex-col items-center gap-4">
         <div className="rounded-full border border-gray-500 p-0.5">
           <Image
@@ -65,11 +73,16 @@ export default function ItemsWork({ experience }: ItemsWorkProps) {
           Competências
         </p>
         <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8 ">
-          {experience.tecnologies.map((tech) => (
-            <TechBadge key={`experience-${tech.name}`} name={tech.name} />
+          {experience.tecnologies.map((tech, i) => (
+            <TechBadge
+            initial={{opacity:0, scale:0}}
+              whileInView={{opacity:1, scale:1}}
+              exit={{opacity:0,  scale:0}}
+              transition={{duration:0.5, delay:0.5+i*0.1}}
+            key={`experience-${tech.name}`} name={tech.name} />
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
