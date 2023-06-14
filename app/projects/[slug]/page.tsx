@@ -66,7 +66,6 @@ export async function generateStaticParams() {
   `
   const result: ProjectsPageDataStatic = await fetchHydrahpyQuery(query);
   const {projects}=result
-  console.log(projects)
   return projects
 }
 
