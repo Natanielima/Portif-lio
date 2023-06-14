@@ -8,7 +8,7 @@ export const fetchHydrahpyQuery = async (query: string) => {
     },
     body: JSON.stringify({ query }),
     next: {
-      revalidate: 60*24,
+      revalidate: 60,
     },
   });
   const { data } = await response.json();
