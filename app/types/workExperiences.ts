@@ -2,7 +2,7 @@ import { KnownTech } from './projects'
 import type { RichTextContent } from '@graphcms/rich-text-types'
 
 export type workExperiences = {
-  compayLogo: {
+  companyLogo: {
     url: string
   }
   role: string

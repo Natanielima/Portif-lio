@@ -29,16 +29,20 @@ export default function HeroSection({ homeInfo }: HeroSectionProps) {
             <RichText content={homeInfo.introdution.raw} />
           </div>
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px] ">
-            {homeInfo.tecnologies.map((tech, i) => (
-              <TechBadge
-               key={tech.name}
-               name={tech.name}
-               initial={{opacity:0, scale:0}}
-               whileInView={{opacity:1, scale:1}}
-               exit={{opacity:0, scale:0}}
-               transition={{duration:0.5, delay:i*0.2}}
-               />
-            ))}
+          {homeInfo.tecnologies.map((tech, i) => {
+  console.log(tech); // Mover o console.log para dentro de uma função de bloco
+  return (
+    <TechBadge
+      key={tech.name}
+      name={tech.name}
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0 }}
+      transition={{ duration: 0.5, delay: i * 0.2 }}
+    />
+  );
+})}
+
           </div>
           <div className="w-max mt-6 lg:mt-10 flex sm:items-center sm:gap-5 sm:flex-row flex-col">
             <Button className="shadow-button" onClick={handleContact}>

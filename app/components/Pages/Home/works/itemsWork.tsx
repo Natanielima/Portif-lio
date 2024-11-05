@@ -42,7 +42,7 @@ export default function ItemsWork({ experience }: ItemsWorkProps) {
       <div className="flex flex-col items-center gap-4">
         <div className="rounded-full border border-gray-500 p-0.5">
           <Image
-            src="/images/eleva.svg"
+            src={experience.companyLogo.url}
             alt="ElevaSoft"
             width={40}
             height={40}
@@ -59,7 +59,7 @@ export default function ItemsWork({ experience }: ItemsWorkProps) {
             rel="noreferrer"
             className="text-gray-500 hover:text-emerald-500 transition-colors"
           >
-            @{experience.companyName}
+            {experience.companyName}
           </a>
           <h4 className="text-gray-300">{experience.role}</h4>
           <span className="text-gray-500">
